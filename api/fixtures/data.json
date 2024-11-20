@@ -1,0 +1,135 @@
+[
+    {
+      "model": "api.usuario",
+      "pk": 1,
+      "fields": {
+        "nombre": "Juan Pérez",
+        "correo": "juan.perez@example.com",
+        "contraseña": "contraseña_segura123",
+        "foto_id": null,
+        "foto_perfil": null,
+        "fecha_registro": "2024-11-19T12:00:00Z",
+        "estado": "activo"
+      }
+    },
+    {
+      "model": "api.usuario",
+      "pk": 2,
+      "fields": {
+        "nombre": "Ana Gómez",
+        "correo": "ana.gomez@example.com",
+        "contraseña": "otra_contraseña123",
+        "foto_id": null,
+        "foto_perfil": null,
+        "fecha_registro": "2024-11-19T13:00:00Z",
+        "estado": "activo"
+      }
+    },
+    {
+      "model": "api.perfildeusuario",
+      "pk": 1,
+      "fields": {
+        "usuario": 1,
+        "total_reportes": 5,
+        "total_apoyos": 3
+      }
+    },
+    {
+      "model": "api.perfildeusuario",
+      "pk": 2,
+      "fields": {
+        "usuario": 2,
+        "total_reportes": 2,
+        "total_apoyos": 1
+      }
+    },
+    {
+      "model": "api.entidadoficial",
+      "pk": 1,
+      "fields": {
+        "nombre": "Policía Municipal",
+        "categoria": "Seguridad",
+        "url_oficial": "https://policia.teziutlan.gob.mx"
+      }
+    },
+    {
+      "model": "api.entidadoficial",
+      "pk": 2,
+      "fields": {
+        "nombre": "Servicios de Salud",
+        "categoria": "Salud",
+        "url_oficial": "https://salud.teziutlan.gob.mx"
+      }
+    },
+    {
+      "model": "api.reporte",
+      "pk": 1,
+      "fields": {
+        "usuario": 1,
+        "fecha_reporte": "2024-11-19T14:00:00Z",
+        "ubicacion_latitud": 19.8161,
+        "ubicacion_longitud": -97.3510,
+        "tipo": "Fuga de agua",
+        "descripcion": "Hay una fuga de agua en la calle principal cerca de la plaza.",
+        "foto_reporte": null,
+        "foto_referencia": null,
+        "estado_reporte": "abierto",
+        "entidad": 2
+      }
+    },
+    {
+      "model": "api.reporte",
+      "pk": 2,
+      "fields": {
+        "usuario": 2,
+        "fecha_reporte": "2024-11-19T15:00:00Z",
+        "ubicacion_latitud": 19.8155,
+        "ubicacion_longitud": -97.3523,
+        "tipo": "Bache en la calle",
+        "descripcion": "Hay un bache grande en la calle del centro.",
+        "foto_reporte": null,
+        "foto_referencia": null,
+        "estado_reporte": "en progreso",
+        "entidad": 1
+      }
+    },
+    {
+      "model": "api.apoyoenreporte",
+      "pk": 1,
+      "fields": {
+        "usuario": 1,
+        "reporte": 2,
+        "fecha_apoyo": "2024-11-19T16:00:00Z"
+      }
+    },
+    {
+      "model": "api.apoyoenreporte",
+      "pk": 2,
+      "fields": {
+        "usuario": 2,
+        "reporte": 1,
+        "fecha_apoyo": "2024-11-19T17:00:00Z"
+      }
+    },
+    {
+      "model": "api.comentarioenreporte",
+      "pk": 1,
+      "fields": {
+        "usuario": 1,
+        "reporte": 2,
+        "contenido": "Este bache es un peligro, necesitamos que lo reparen lo antes posible.",
+        "fecha_comentario": "2024-11-19T17:30:00Z"
+      }
+    },
+    {
+      "model": "api.comentarioenreporte",
+      "pk": 2,
+      "fields": {
+        "usuario": 2,
+        "reporte": 1,
+        "contenido": "¿Ya han enviado personal para atender la fuga?",
+        "fecha_comentario": "2024-11-19T18:00:00Z"
+      }
+    }
+  ]
+  
